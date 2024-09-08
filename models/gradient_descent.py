@@ -46,8 +46,8 @@ def gradient_descent(X_train, y_train, learning_rate, max_iteration):
 
 
 # Load data
-X_train = pd.read_csv('../data/processed/gradient/X_train.csv').to_numpy()
-y_train = pd.read_csv('../data/processed/gradient/y_train.csv').values.flatten()
+X_train = pd.read_csv('../data/processed/gradient_descent/X_train.csv').to_numpy()
+y_train = pd.read_csv('../data/processed/gradient_descent/y_train.csv').values.flatten()
 
 w, b = gradient_descent(X_train, y_train, learning_rate=0.0007, max_iteration=10000)
 

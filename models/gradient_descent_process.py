@@ -27,10 +27,10 @@ y = pd.concat([y1, y2], axis=0)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 #save to raw files
-X_test.to_csv('../data/processed/gradient/X_test.csv', index=False)
-y_test.to_csv('../data/processed/gradient/y_test.csv', index=False)
-X_train.to_csv('../data/processed/gradient/X_train.csv', index=False)
-y_train.to_csv('../data/processed/gradient/y_train.csv', index=False)
+X_test.to_csv('../data/processed/gradient_descent/X_test.csv', index=False)
+y_test.to_csv('../data/processed/gradient_descent/y_test.csv', index=False)
+X_train.to_csv('../data/processed/gradient_descent/X_train.csv', index=False)
+y_train.to_csv('../data/processed/gradient_descent/y_train.csv', index=False)
 
 
 
