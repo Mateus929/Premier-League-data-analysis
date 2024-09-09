@@ -38,6 +38,8 @@ def gradient_descent(X_train, y_train, learning_rate, max_iteration):
         if np.all(dw == 0) and db == 0:
             break
         previous_cost = cur_cost
+        if(previous_cost < cur_cost):
+            print(f"On iteration {_} cost went from {previous_cost} to {cur_cost}")
         w -= learning_rate * dw
         b -= learning_rate * db
         if _ % 100 == 0:
@@ -46,10 +48,10 @@ def gradient_descent(X_train, y_train, learning_rate, max_iteration):
 
 
 # Load data
-X_train = pd.read_csv('../data/processed/gradient_descent/X_train.csv').to_numpy()
-y_train = pd.read_csv('../data/processed/gradient_descent/y_train.csv').values.flatten()
+X_train = pd.read_csv('../../data/processed/gradient_descent/X_train.csv').to_numpy()
+y_train = pd.read_csv('../../data/processed/gradient_descent/y_train.csv').values.flatten()
 
-w, b = gradient_descent(X_train, y_train, learning_rate=0.0007, max_iteration=10000)
+w, b = gradient_descent(X_train, y_train, learning_rate=0.0007, max_iteration=500000)
 
 print("Weights:", w)
 print("Bias:", b)

@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Load data
-df = pd.read_csv('../data/raw/matches.csv')
+df = pd.read_csv('../../data/raw/matches.csv')
 
 # Load input data
 df['100_minus_poss'] = 100 - df['poss']
