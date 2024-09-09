@@ -13,6 +13,11 @@ err = y_hat - y_train
 max_error = np.max(np.abs(err))
 min_error = np.min(np.abs(err))
 average_error = np.mean(np.abs(err))
+mse = np.mean(err ** 2)
+cost_for_test = mse / 2
+
 print(f"Max Error: {max_error}")
 print(f"Min Error: {min_error}")
 print(f"Average Error: {average_error}")
+print(f"MSE: {mse}")
+print(f"Value of cost function which is mse / 2: {cost_for_test}")
